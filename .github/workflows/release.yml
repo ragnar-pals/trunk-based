@@ -12,12 +12,12 @@ jobs:
   build:
     runs-on: [windows-2019]
     steps:
-      #- uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       
       - name: Print current dir
         run: dir
         
-      - uses: cschleiden/replace-tokens@v1
+      - uses: cschleiden/replace-tokens@v1.1
         with:
           files: '["${{github.workspace}}/.npmrc"]'
           tokenPrefix: '{{'
