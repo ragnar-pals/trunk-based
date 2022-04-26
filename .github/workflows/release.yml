@@ -1,6 +1,6 @@
 name: Do stuff
 
-# Controls when the workflow will run
+# Controls when the workflow will run f
 on:
   push:
     branches: [ main, dev ]
