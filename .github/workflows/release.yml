@@ -17,12 +17,13 @@ jobs:
       - name: Print current dir
         run: dir
         
-      - uses: franzbischoff/replace_envs@v1
-        env:
-          VERSION: 'some value'
+      - uses: cschleiden/replace-tokens@v1
         with:
-          from_file: '.npmrc'
-          to_file: '.npmrc'
+          files: '["myfolder/myfolder2/.npmrc"]'
+          tokenPrefix: '__{'
+          tokenSuffix: '}__'
+        env:
+          VERSION: "3.2.1"
 
       - name: print .npmrc template
         run: cat .npmrc
