@@ -1,0 +1,28 @@
+name: Do stuff
+
+# Controls when the workflow will run
+on:
+  push:
+    branches: [ main, dev ]
+defaults:
+  run:
+    working-directory: myfolder\myfolder2
+
+jobs:
+  build:
+    runs-on: [ self-hosted, Windows ]
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Replace tokens in .npmrc template
+        uses: cschleiden/replace-tokens@v1
+        with:
+          files: .npmrc
+          tokenPrefix: "{{"
+          tokenSuffix: "}}"
+        env:
+          VERSION: 3.3.3
+        continue-on-error: false
+      
+      - name: print .npmrc template
+        run: cat .npmrc
