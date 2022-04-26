@@ -12,17 +12,17 @@ jobs:
   build:
     runs-on: [windows-2019]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
       
       - name: Print current dir
         run: dir
-
-      - name: Replace
-        uses: ragnar-pals/replace-tokens@master
-        with:
-          files: '["./.npmrc"]'
+        
+      - uses: franzbischoff/replace_envs@v1
         env:
-          VERSION: "3.2.1"
-      
+          VERSION: 'some value'
+        with:
+          from_file: '.npmrc'
+          to_file: '.npmrc'
+
       - name: print .npmrc template
         run: cat .npmrc
