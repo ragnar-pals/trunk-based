@@ -18,7 +18,7 @@ jobs:
         run: dir
 
       - name: Replace
-        uses: cschleiden/replace-tokens@v1
+        uses: cschleiden/replace-tokens@v1.1
         with:
           tokenPrefix: '{{'
           tokenSuffix: '}}'
