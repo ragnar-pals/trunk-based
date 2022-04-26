@@ -17,15 +17,14 @@ jobs:
       - name: Print current dir
         run: dir
 
-      - name: Replace tokens in .npmrc template
+      - name: Replace
         uses: cschleiden/replace-tokens@v1
         with:
+          tokenPrefix: '{{'
+          tokenSuffix: '}}'
           files: '[".npmrc"]'
-          tokenPrefix: "{{"
-          tokenSuffix: "}}"
         env:
-          VERSION: "3.3.3"
-        continue-on-error: false
+          VERSION: 3.2.1
       
       - name: print .npmrc template
         run: cat .npmrc
