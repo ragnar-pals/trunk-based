@@ -6,7 +6,7 @@ on:
     branches: [ main, dev ]
 defaults:
   run:
-    working-directory: myfolder\myfolder2
+    working-directory: myfolder/myfolder2
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
         
       - uses: cschleiden/replace-tokens@v1.1
         with:
-          files: '["${{github.workspace}}/.npmrc"]'
+          files: '["./.npmrc"]'
           tokenPrefix: '{{'
           tokenSuffix: '}}'
         env:
