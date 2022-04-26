@@ -20,7 +20,7 @@ jobs:
       - name: Replace tokens in .npmrc template
         uses: cschleiden/replace-tokens@v1
         with:
-          files: [".npmrc"]
+          files: '[".npmrc"]'
           tokenPrefix: "{{"
           tokenSuffix: "}}"
         env:
