@@ -20,11 +20,9 @@ jobs:
       - name: Replace
         uses: ragnar-pals/replace-tokens@master
         with:
-          tokenPrefix: '{{'
-          tokenSuffix: '}}'
           files: '["./.npmrc"]'
         env:
-          VERSION: 3.2.1
+          VERSION: "3.2.1"
       
       - name: print .npmrc template
         run: cat .npmrc
