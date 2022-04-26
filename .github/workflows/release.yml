@@ -16,6 +16,9 @@ jobs:
       
       - name: Print current dir
         run: dir
+      
+      - name: Get cwd
+        run: echo 'Hi ${{ github.workspace }}'  # Hi Mona
 
       - name: Replace
         uses: cschleiden/replace-tokens@v1.1
