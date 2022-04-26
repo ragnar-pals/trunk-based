@@ -19,7 +19,7 @@ jobs:
         
       - uses: cschleiden/replace-tokens@v1
         with:
-          files: '["${{GITHUB_WORKSPACE}}/.npmrc"]'
+          files: '["${{github.workspace}}/.npmrc"]'
           tokenPrefix: '{{'
           tokenSuffix: '}}'
         env:
