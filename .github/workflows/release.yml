@@ -22,7 +22,7 @@ jobs:
         with:
           tokenPrefix: '{{'
           tokenSuffix: '}}'
-          files: '[".npmrc"]'
+          files: '["./.npmrc"]'
         env:
           VERSION: 3.2.1
       
