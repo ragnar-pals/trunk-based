@@ -20,11 +20,11 @@ jobs:
       - name: Replace tokens in .npmrc template
         uses: cschleiden/replace-tokens@v1
         with:
-          files: .npmrc
+          files: [".npmrc"]
           tokenPrefix: "{{"
           tokenSuffix: "}}"
         env:
-          VERSION: 3.3.3
+          VERSION: "3.3.3"
         continue-on-error: false
       
       - name: print .npmrc template
