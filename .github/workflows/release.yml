@@ -21,7 +21,7 @@ jobs:
         run: echo 'Hi ${{ github.workspace }}'  # Hi Mona
 
       - name: Replace
-        uses: cschleiden/replace-tokens@v1.1
+        uses: ragnar-pals/replace-tokens@v1.1
         with:
           tokenPrefix: '{{'
           tokenSuffix: '}}'
